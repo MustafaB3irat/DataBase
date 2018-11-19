@@ -1,0 +1,12 @@
+
+.Buttons:focused{
+	
+	-fx-border-color: #006325;
+	-fx-border-radius: 10px 0px 10px 0px;
+	
+}
+
+#exit:hover{
+	-fx-border-color:white;
+}
+	

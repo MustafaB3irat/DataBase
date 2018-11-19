@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.insCourseController">
+   <children>
+      <ImageView fitHeight="69.0" fitWidth="200.0" layoutX="80.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="41.0" layoutY="99.0" prefHeight="26.0" prefWidth="74.0" text="To Do">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="ToDoAddAdd" layoutX="113.0" layoutY="334.0" mnemonicParsing="false" onAction="#pushToDo" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 50% 50% 50% 50%; -fx-background-color: #07601f;" text="Push" textFill="WHITE" />
+      <Button fx:id="ToDoAddExit" layoutX="233.0" layoutY="334.0" mnemonicParsing="false" onAction="#ToDoAddExit" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 50% 50% 50% 50%; -fx-background-color: #07601f;" text="Exit" textFill="WHITE" />
+      <Line endX="58.0" endY="31.0" layoutX="183.0" layoutY="344.0" startX="-29.0" startY="-2.0" stroke="#ee0a0a" />
+      <Line endX="50.0" endY="-34.0" layoutX="183.0" layoutY="382.0" startX="-30.0" startY="-7.0" stroke="#0c8649" />
+      <TextField fx:id="ToDoAddType" alignment="CENTER" layoutX="115.0" layoutY="100.0" prefHeight="25.0" prefWidth="164.0" promptText="To Do Name or Type" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Circle fx:id="ToDoAddClear" fill="#ff1f1f" layoutX="196.0" layoutY="358.0" onMouseClicked="#ToDoAddClear" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="CENTER" layoutX="41.0" layoutY="151.0" prefHeight="26.0" prefWidth="74.0" text="Start Date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="41.0" layoutY="187.0" prefHeight="26.0" prefWidth="74.0" text="Due Date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="ToDoAddStartDate" layoutX="120.0" layoutY="152.0" prefHeight="25.0" prefWidth="164.0" promptText="            MM/DD/YY" />
+      <DatePicker fx:id="ToDoAddDueDate" layoutX="120.0" layoutY="188.0" prefHeight="25.0" prefWidth="164.0" promptText="            MM/DD/YY" />
+      <TextField fx:id="ToDoInsId1" alignment="CENTER" layoutX="120.0" layoutY="229.0" prefHeight="25.0" prefWidth="164.0" promptText="Student Ins Id" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <TextField fx:id="ToDoCourseId1" alignment="CENTER" layoutX="120.0" layoutY="266.0" prefHeight="25.0" prefWidth="164.0" promptText="Student Course Id" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <TextField fx:id="ToDoStudentId1" alignment="CENTER" layoutX="120.0" layoutY="301.0" prefHeight="25.0" prefWidth="164.0" promptText="Student Id" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Label alignment="CENTER" layoutX="46.0" layoutY="229.0" prefHeight="26.0" prefWidth="74.0" text="Ins Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="41.0" layoutY="266.0" prefHeight="26.0" prefWidth="74.0" text="Course Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="41.0" layoutY="301.0" prefHeight="26.0" prefWidth="74.0" text="Student Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

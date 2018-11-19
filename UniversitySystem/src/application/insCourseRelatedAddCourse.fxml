@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.insCourseController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="63.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="insCourseRealtedCourseName" alignment="CENTER" layoutX="90.0" layoutY="183.0" prefHeight="25.0" prefWidth="165.0" promptText="Enter Course's Name" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Label alignment="CENTER" layoutX="9.0" layoutY="131.0" prefHeight="25.0" prefWidth="78.0" text="ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="insCourseRelatedCourseAdd" layoutX="87.0" layoutY="323.0" mnemonicParsing="false" onAction="#insCourseRelatedAddCourse" prefHeight="40.0" prefWidth="43.0" style="-fx-background-radius: 50% 50% 50% 50%; -fx-background-color: #07601f;" text="Add" textFill="WHITE" />
+      <Button fx:id="insCourseRelatedExit" layoutX="211.0" layoutY="323.0" mnemonicParsing="false" onAction="#insCourseRelatedExit" prefHeight="40.0" prefWidth="43.0" style="-fx-background-radius: 50% 50% 50% 50%; -fx-background-color: #07601f;" text="Exit" textFill="#f8f8f8" />
+      <Line endX="78.0" endY="28.0" layoutX="133.0" layoutY="324.0" startX="-5.0" startY="28.0" stroke="#cd0c0c" />
+      <Line endX="72.0" endY="-18.0" layoutX="145.0" layoutY="348.0" startX="-18.0" startY="-18.0" stroke="#0c7912" />
+      <TextField fx:id="inCourseRelatedCourseId" alignment="CENTER" layoutX="91.0" layoutY="132.0" prefHeight="25.0" prefWidth="165.0" promptText="Enter Course's ID ...." style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Circle fx:id="courseRelatedAddCourseClear" fill="#ff1f1f" layoutX="247.0" layoutY="119.0" onMouseClicked="#courseRelatedAddCourseClear" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="CENTER" layoutX="9.0" layoutY="182.0" prefHeight="25.0" prefWidth="78.0" text="Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="9.0" layoutY="228.0" prefHeight="25.0" prefWidth="78.0" text="Hours">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inCourseRelatedCourseHours" alignment="CENTER" layoutX="90.0" layoutY="228.0" prefHeight="25.0" prefWidth="165.0" promptText="Enter course's Hours" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Label alignment="CENTER" layoutX="9.0" layoutY="275.0" prefHeight="25.0" prefWidth="78.0" text="Ins ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="insCourseRelatedCourseInsId" alignment="CENTER" layoutX="90.0" layoutY="275.0" prefHeight="25.0" prefWidth="165.0" promptText="Enter course Instructor's ID" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <TableView fx:id="CourseAddTableView" layoutX="292.0" layoutY="82.0" prefHeight="189.0" prefWidth="255.0">
+        <columns>
+          <TableColumn fx:id="CourseNameColumn" prefWidth="98.0" text="Name" />
+          <TableColumn fx:id="CourseIdColumn" prefWidth="68.0" text="Id" />
+            <TableColumn fx:id="CourseHoursColumn" prefWidth="88.0" text="Hours" />
+        </columns>
+      </TableView>
+      <Separator layoutX="265.0" layoutY="1.0" orientation="VERTICAL" prefHeight="390.0" prefWidth="11.0" />
+      <Label layoutX="262.0" layoutY="188.0" text="OR">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="click" layoutX="359.0" layoutY="46.0" onMouseClicked="#initialized1" text="Choose From Here">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inCourseRelatedInsId1" alignment="CENTER" layoutX="345.0" layoutY="282.0" promptText="Enter Ins Id here..." style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Label layoutX="292.0" layoutY="284.0" text="Ins Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="insCourseRelatedCourseAdd1" layoutX="398.0" layoutY="323.0" mnemonicParsing="false" onAction="#addCourseFromTableView" prefHeight="40.0" prefWidth="43.0" style="-fx-background-radius: 50% 50% 50% 50%; -fx-background-color: #07601f;" text="Add" textFill="WHITE" />
+      <Line endX="-64.0" endY="16.0" layoutX="411.0" layoutY="30.0" startX="-81.0" startY="8.0" />
+      <Line endX="-109.5" endY="10.707107543945312" layoutX="443.0" layoutY="36.0" startX="-95.29290771484375" startY="10.707107543945312" />
+      <Line endX="-107.0" endY="10.292892456054688" layoutX="449.0" layoutY="26.0" startX="-100.79290771484375" startY="20.207107543945312" />
+      <Label layoutX="292.0" layoutY="26.0" text="Click">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

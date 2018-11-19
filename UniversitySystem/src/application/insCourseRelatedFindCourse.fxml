@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="289.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.insCourseController">
+   <children>
+      <ImageView fitHeight="69.0" fitWidth="200.0" layoutX="80.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="126.0" layoutY="93.0" prefHeight="26.0" prefWidth="74.0" text="ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="insCourseRelatedFindCourseId" alignment="CENTER" layoutX="81.0" layoutY="159.0" prefHeight="25.0" prefWidth="164.0" promptText="Enter Course's ID to Find..." style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Button fx:id="insCourseRelatedFindCourseFind" layoutX="72.0" layoutY="201.0" mnemonicParsing="false" onAction="#insCourseRelatedFindCourse" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 50% 50% 50% 50%; -fx-background-color: #07601f;" text="Find" textFill="WHITE" />
+      <Button fx:id="insCourseRelatedFindCourseExit" layoutX="193.0" layoutY="201.0" mnemonicParsing="false" onAction="#insCourseRelatedFindCourseExit" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 50% 50% 50% 50%; -fx-background-color: #07601f;" text="Exit" textFill="WHITE" />
+      <Line endX="58.0" endY="31.0" layoutX="143.0" layoutY="211.0" startX="-23.0" startY="10.0" stroke="#ee0a0a" />
+      <Line endX="50.0" endY="-34.0" layoutX="143.0" layoutY="249.0" startX="-30.0" startY="-7.0" stroke="#0c8649" />
+      <TextField fx:id="insCourseRelatedFindInsId" alignment="CENTER" layoutX="81.0" layoutY="126.0" prefHeight="25.0" prefWidth="164.0" promptText="Enter Instructor's ID ..." style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Circle fx:id="courseFindClear" fill="#ff1f1f" layoutX="235.0" layoutY="107.0" onMouseClicked="#courseFindClear" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>

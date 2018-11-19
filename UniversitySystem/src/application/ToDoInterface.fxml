@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.insCourseController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="211.0" orientation="VERTICAL" prefHeight="391.0" prefWidth="16.0" />
+      <Separator layoutY="108.0" prefHeight="2.0" prefWidth="216.0" />
+      <Separator layoutY="283.0" prefHeight="3.0" prefWidth="216.0" />
+      <Button fx:id="ToDoPush" layoutX="37.0" layoutY="297.0" mnemonicParsing="false" onAction="#showToDoPushInterface" prefHeight="32.0" prefWidth="142.0" style="-fx-background-radius: 15px 0px 15px 0px;" text="Push A ToDo">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="ToDoPop" layoutX="37.0" layoutY="345.0" mnemonicParsing="false" onAction="#ToDoPop" prefHeight="32.0" prefWidth="142.0" style="-fx-background-radius: 15px 0px 15px 0px;" text="Pop A ToDo">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="ToDoShow" layoutX="37.0" layoutY="236.0" mnemonicParsing="false" onAction="#showToDo" prefHeight="32.0" prefWidth="142.0" style="-fx-background-radius: 15px 0px 15px 0px;" text="Show ToDo's">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="ToDoTableView" layoutX="227.0" layoutY="14.0" prefHeight="369.0" prefWidth="302.0">
+        <columns>
+          <TableColumn fx:id="ToDoTypeColumn" editable="false" prefWidth="117.0" sortable="false" text="To Do Name" />
+          <TableColumn fx:id="ToDoStartDate" editable="false" prefWidth="88.0" sortable="false" text="Start Date" />
+            <TableColumn fx:id="ToDoDueDate" editable="false" prefWidth="93.0" sortable="false" text="Due Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="ToDoInsId" alignment="CENTER" layoutX="34.0" layoutY="119.0" promptText="Instructor's ID" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <TextField fx:id="ToDoCourseId" alignment="CENTER" layoutX="34.0" layoutY="156.0" promptText="Course's Id" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <TextField fx:id="ToDoStudentId" alignment="CENTER" layoutX="34.0" layoutY="193.0" promptText="Student's Id" style="-fx-background-radius: 15px 0px 15px 0px;" />
+      <Circle fx:id="ToDoClear" fill="#ff1f1f" layoutX="203.0" layoutY="119.0" onMouseClicked="#ToDoInterfaceClear" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>
